@@ -3,15 +3,17 @@
 void game_word( int word_len,char guess_word,char word[100])
     {
     int i;
-    for(i=0;i<word_len;i++)
+    for(i=0;i<=word_len-1;i++)
     {
+        printf("\nlen: %d\ni: %d",word_len,i);
+        printf("\nguess: %c\nword_letter:%c",guess_word,word[i]);
         if (guess_word==word[i])
         {
-            printf("%c",guess_word);
+            printf("\n%c",guess_word);
         }
         else
         {
-            printf("-");
+             printf("\n-");
         }
         
     }
@@ -23,7 +25,7 @@ int main()
 {
     char word[100];
     char guess_word;
-
+    
     int i;
 
     //p1 input word
@@ -37,5 +39,5 @@ int main()
     guess_word=getchar();
     game_word(word_len,guess_word,word);
 
-    return 0; 
+   return 0;
 }
